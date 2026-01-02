@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Organización · Álvaro & Ana</title>
+  <meta name="description" content="Información de la boda de Álvaro y Ana · 23 de mayo de 2026 · Zibá, Segovia"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Timeline horizontal con placeholders para logos */
+    .timeline-horizontal {
+      position: relative;
+      max-width: 100%;
+      margin: 4rem auto;
+      padding: 2rem 1rem;
+    }
+
+    .timeline-line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--dorado);
+      z-index: 1;
+    }
+
+    .timeline-events {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding: 1rem 0;
+    }
+
+    .timeline-event {
+      flex: 0 0 auto;
+      min-width: 160px;
+      text-align: center;
+      background: white;
+      padding: 1.5rem 1rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+
+    .timeline-event .logo-placeholder {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 50%;
+      background: #f8f5f2; /* fondo suave mientras cargas tu logo */
+    }
+
+    .timeline-event h3 {
+      margin: 0.4rem 0 0.2rem;
+      color: var(--granate);
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    .timeline-event .time {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 0.4rem;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-events {
+        justify-content: flex-start;
+      }
+      .timeline-event {
+        min-width: 140px;
+      }
+      .timeline-event .logo-placeholder {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Álvaro <span class="amp">&</span> Ana</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="organizacion.html">Organización</a></li>
+        <li><a href="asistencia.html">Asistencia</a></li>
+        <li><a href="otra-info.html">Otra información de interés</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1 class="fecha-destacada">23 de mayo de 2026</h1>
+      <p class="fecha-destacada">Desde las 13:30h</p>
+      <p class="fecha-subtitulo">Zibá José María Eventos – Segovia</p>
+
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.5!2d-4.0955677!3d40.9317058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd413ffbee6b1caf%3A0xc09092c2359e79b3!2sZib%C3%A1+Jos%C3%A9+Mar%C3%ADa+Eventos!5e1!3m2!1ses!2ses!4v1730000000000!5m2!1ses!2ses" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <section>
+      <h2>Programación</h2>
+      
+      <div class="timeline-horizontal">
+        <div class="timeline-line"></div>
+        <div class="timeline-events">
+          <div class="timeline-event">
+            <img class="logo-placeholder" src="https://via.placeholder.com/90x90/6b2d3d/ffffff?text=Ceremonia" alt="Ceremonia">
+            <h3>Ceremonia</h3>
+            <p class="time">13:30 h</p>
+          </div>
+
+          <div class="timeline-event">
+            <img class="logo-placeholder" src="https://via.placeholder.com/90x90/6b2d3d/ffffff?text=Cóctel" alt="Cóctel">
+            <h3>Cóctel</h3>
+          </div>
+
+          <div class="timeline-event">
+            <img class="logo-placeholder" src="https://via.placeholder.com/90x90/6b2d3d/ffffff?text=Comida" alt="Comida">
+            <h3>Comida</h3>
+          </div>
+
+          <div class="timeline-event">
+            <img class="logo-placeholder" src="https://via.placeholder.com/90x90/6b2d3d/ffffff?text=Discoteca" alt="Discoteca">
+            <h3>Discoteca</h3>
+          </div>
+        </div>
+      </div>
+
+      <p class="timeline-note">
+        Habrá autobuses de ida y vuelta desde Cantalejo. Hora a determinar.
+      </p>
+
+    </section>
+  </main>
+
+</body>
+</html>
