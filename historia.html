@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nuestra historia · Álvaro & Ana</title>
+  <meta name="description" content="La historia de Álvaro y Ana · Boda 23 de mayo de 2026"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Timeline CENTRADO sin línea lateral */
+    .timeline-vertical {
+      position: relative;
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 2rem 1rem;
+    }
+
+    /* ELIMINAMOS la línea vertical */
+    .timeline-vertical::before {
+      display: none;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 4rem;
+      padding-left: 0; /* Sin padding izquierdo */
+    }
+
+    /* ELIMINAMOS el punto lateral */
+    .timeline-dot {
+      display: none;
+    }
+
+    /* Alineación perfecta DENTRO de cada cajita del timeline */
+    .timeline-content {
+      text-align: center;
+      padding: 1.5rem 1.2rem;
+      background: white;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+    
+    .timeline-date {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--granate);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    
+    .timeline-photo {
+      display: block;
+      margin: 0 auto 1.2rem;
+      max-width: 90%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .timeline-title {
+      font-size: 1.15rem;
+      color: var(--text-main);
+      font-style: italic;
+      line-height: 1.5;
+      margin: 0.5rem auto 0;
+      max-width: 95%;
+    }
+    
+    /* Mantengo el centrado general de la página */
+    .hero-section, .story, .photo-carousel {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    /* Texto introductorio antes del timeline */
+    .intro-timeline {
+      max-width: 680px;
+      margin: 2rem auto 3rem;
+      padding: 0 1rem;
+    }
+
+    .intro-timeline p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: var(--text-main);
+      text-align: center;
+      margin: 1rem auto;
+    }
+
+    .intro-carrusel {
+      max-width: 680px;
+      margin: 2rem auto 1.5rem;
+    }
+    
+    .story h3 {
+      margin: 2rem 0 1.5rem;
+      color: var(--granate);
+    }
+
+    /* Caja destacada para el cierre de la historia */
+    .historia-cierre {
+      background: linear-gradient(135deg, rgba(196, 166, 106, 0.08) 0%, rgba(107, 45, 61, 0.06) 100%);
+      border-left: 4px solid var(--dorado);
+      padding: 2rem 2.5rem;
+      margin: 3rem auto;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(107, 45, 61, 0.08);
+    }
+
+    .historia-cierre p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      line-height: 1.8;
+      color: var(--granate);
+      font-weight: 500;
+      margin: 0.8rem 0;
+      text-align: center;
+    }
+
+    .historia-cierre p:last-child {
+      font-style: italic;
+      color: var(--dorado);
+      font-size: 1.4rem;
+      margin-top: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="index.html" style="color: var(--dorado); text-decoration: none;">Álvaro <span class="amp">&</span> Ana</a></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="historia.html">Nuestra historia</a></li>
+        <li><a href="organizacion.html">Organización</a></li>
+        <li><a href="asistencia.html">Asistencia</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="hero-section">
+      <div class="subtitle">23 · mayo · 2026 · Zibá, Segovia</div>
+      <h2>Nuestra historia</h2>
+      
+      <!-- Texto introductorio -->
+      <div class="intro-timeline">
+        <p>
+          Hay historias que comienzan sin aviso, sin un momento exacto que podamos señalar y decir: "fue aquí". La nuestra es de esas. Empezó despacio, entre risas compartidas y conversaciones que nunca parecían tener fin. Y, sin que ninguno de los dos lo planeara, se convirtió en lo más importante que tenemos.
+        </p>
+      </div>
+      
+      <div class="timeline-vertical">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2016</div>
+            <img class="timeline-photo" src="img/foto1.jpeg" alt="2016" loading="lazy">
+            <p class="timeline-title">Después de años de amistad, un día nuestras miradas se cruzaron de otra manera. Sin grandes declaraciones ni fuegos artificiales, pero con esa sensación silenciosa de que algo estaba cambiando.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2017 – 2019</div>
+            <img class="timeline-photo" src="img/fotolondres2.jpg" alt="2017-2019" loading="lazy">
+            <p class="timeline-title">La vida decidió ponernos a prueba pronto. Londres se interpuso en el camino y nos separó provisionalmente. La distancia hizo lo suyo: echar de menos, aprender a esperar y descubrir que, incluso lejos, seguíamos estando cerca.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2019</div>
+            <img class="timeline-photo" src="img/fotocumple3.jpg" alt="2019" loading="lazy">
+            <p class="timeline-title">Hasta que llegó el mejor regalo de cumpleaños posible: la vuelta de Álvaro a España. Y con ella, la certeza de que algunas historias siempre encuentran el camino de regreso.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2020 – 2022</div>
+            <img class="timeline-photo" src="img/fotocovid4.jpg" alt="2020-2022" loading="lazy">
+            <p class="timeline-title">Cuando pensábamos que nada podía complicarse más, llegó el COVID. Uno en Cantalejo, otro en Madrid: restricciones, impedimentos y demasiados días contados en videollamadas. No fue fácil, pero fue nuestro. Y eso lo hizo suficiente.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2023</div>
+            <img class="timeline-photo" src="img/fotocasa5.jpg" alt="2023" loading="lazy">
+            <p class="timeline-title">Tomamos nuestra primera gran decisión conjunta: irnos a vivir juntos. Empezó una nueva etapa hecha de rutinas compartidas, planes improvisados y la tranquilidad de estar, por fin, en el mismo lugar.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2025</div>
+            <img class="timeline-photo" src="img/fotoanillo7.jpg" alt="2025" loading="lazy">
+            <p class="timeline-title">Y entonces llegó el momento de decirlo en voz alta, delante de todos: Sí, quiero.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="story">
+        <p class="intro-carrusel">
+          Y entre todas esas fechas…<br>
+          Viajamos sin prisas, nos convertimos en tíos, celebramos bodas de amigos y familiares, reímos mucho, crecimos juntos y acumulamos momentos que no salen en las fotos, pero que lo sostienen todo.
+        </p>
+        
+        <!-- Caja destacada para el cierre -->
+        <div class="historia-cierre">
+          <p>Porque nuestra historia no va solo de años y decisiones importantes.</p>
+          <p>Va de elegirse una y otra vez.</p>
+          <p>Y de seguir haciéndolo.</p>
+        </div>
+
+        <h3>Algunos de nuestros momentos favoritos</h3>
+      
+        <div class="photo-carousel">
+          <div class="carousel-track">
+            <img src="img/paris.jpg" alt="París" loading="lazy">
+            <img src="img/bodaRyM.jpg" alt="Boda de R y M" loading="lazy">
+            <img src="img/sansebastian2.jpg" alt="San Sebastián 2" loading="lazy">
+            <img src="img/granada.jpg" alt="Granada" loading="lazy">
+            <img src="img/bodaIyM.jpg" alt="Boda de I y M" loading="lazy">
+            <img src="img/vigo.jpg" alt="Vigo" loading="lazy">
+            <img src="img/bodaLyD.jpg" alt="Boda de L y D" loading="lazy">
+            <img src="img/sevilla.jpg" alt="Sevilla" loading="lazy">
+            <img src="img/ikono.jpg" alt="Ikono" loading="lazy">
+            <img src="img/sansebastian.jpg" alt="San Sebastián" loading="lazy">
+            <img src="img/holi.jpg" alt="Holi" loading="lazy">
+            <img src="img/valencia.jpg" alt="Valencia" loading="lazy">
+            <img src="img/ziba.jpg" alt="Zibá" loading="lazy">
+            <img src="img/bodaMyB.jpg" alt="Boda de M y B" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>Álvaro & Ana · 23 de mayo de 2026 · Zibá, Segovia</p>
+    <p>Hecho con ❤️ para nuestro día especial</p>
+  </footer>
+</body>
+</html>
