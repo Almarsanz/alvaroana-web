@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Organización · Álvaro & Ana</title>
+  <meta name="description" content="Información de la boda de Álvaro y Ana · 23 de mayo de 2026 · Zibá, Segovia"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Timeline horizontal con scroll suave en móvil */
+    .timeline-horizontal {
+      position: relative;
+      max-width: 100%;
+      margin: 3rem auto;
+      padding: 2rem 0;
+      width: 100%;
+    }
+
+    .timeline-line {
+      position: absolute;
+      top: 50%;
+      left: 2rem;
+      right: 2rem;
+      height: 4px;
+      background: var(--dorado);
+      z-index: 1;
+    }
+
+    .timeline-events {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      gap: 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 1rem 2rem;
+      margin: 0 -1rem;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      
+      /* Barra de scroll personalizada */
+      scrollbar-width: thin;
+      scrollbar-color: var(--dorado) var(--crema);
+    }
+
+    /* Personalización del scrollbar en Chrome/Safari */
+    .timeline-events::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .timeline-events::-webkit-scrollbar-track {
+      background: var(--crema);
+      border-radius: 10px;
+    }
+
+    .timeline-events::-webkit-scrollbar-thumb {
+      background: var(--dorado);
+      border-radius: 10px;
+    }
+
+    .timeline-events::-webkit-scrollbar-thumb:hover {
+      background: var(--granate);
+    }
+
+    .timeline-event {
+      flex: 0 0 auto;
+      min-width: 110px;
+      width: 110px;
+      text-align: center;
+      background: white;
+      padding: 1.2rem 0.6rem;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 6px 25px rgba(107,45,61,0.1);
+      transition: transform 0.3s ease;
+      scroll-snap-align: center;
+    }
+
+    .timeline-event:hover {
+      transform: translateY(-6px);
+    }
+
+    .timeline-event .logo-placeholder {
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+      margin: 0 auto 0.8rem;
+      display: block;
+    }
+
+    .timeline-event h3 {
+      margin: 0.4rem 0 0.2rem;
+      color: var(--granate);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .timeline-event .time {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .timeline-note {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      font-style: italic;
+      text-align: center;
+      margin-top: 2rem;
+      max-width: 600px;
+    }
+
+    /* Indicador visual de que se puede hacer scroll (solo en móvil) */
+    .scroll-hint {
+      display: none;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    /* En móvil y tablets */
+    @media (max-width: 768px) {
+      .timeline-line {
+        left: 1rem;
+        right: 1rem;
+      }
+      
+      .timeline-events {
+        justify-content: flex-start;
+        gap: 1.2rem;
+        padding: 1rem 1.5rem;
+      }
+      
+      .timeline-event {
+        min-width: 105px;
+        width: 105px;
+        padding: 1rem 0.5rem;
+      }
+      
+      .timeline-event .logo-placeholder {
+        width: 55px;
+        height: 55px;
+      }
+      
+      .timeline-event h3 {
+        font-size: 0.95rem;
+      }
+      
+      .timeline-event .time {
+        font-size: 0.85rem;
+      }
+
+      /* Mostrar hint de scroll solo en móvil */
+      .scroll-hint {
+        display: block;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .timeline-events {
+        gap: 1rem;
+        padding: 1rem 1rem;
+      }
+      
+      .timeline-event {
+        min-width: 95px;
+        width: 95px;
+      }
+      
+      .timeline-event .logo-placeholder {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="index.html" style="color: var(--dorado); text-decoration: none;">Álvaro <span class="amp">&</span> Ana</a></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="historia.html">Nuestra historia</a></li>
+        <li><a href="organizacion.html">Organización</a></li>
+        <li><a href="asistencia.html">Asistencia</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section>
+      <h1 class="fecha-destacada" style="font-size: clamp(2.8rem, 6vw, 4rem); margin-bottom: 0.5rem; text-align: center;">23 de mayo de 2026</h1>
+      <p class="fecha-destacada" style="font-size: 1.4rem; margin: 0.5rem auto; text-align: center; display: block; width: 100%;">Desde las 13:30 h</p>
+      <p class="fecha-subtitulo" style="font-size: 1.3rem; color: var(--text-muted); margin-bottom: 2rem; text-align: center;">Zibá José María Eventos – Segovia</p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.5!2d-4.0955677!3d40.9317058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd413ffbee6b1caf%3A0xc09092c2359e79b3!2sZib%C3%A1+Jos%C3%A9+Mar%C3%ADa+Eventos!5e1!3m2!1ses!2ses!4v1730000000000!5m2!1ses!2ses"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+    
+    <div class="divider"></div>
+    
+    <section>
+      <h2>Programación</h2>
+    
+      <div class="timeline-horizontal">
+        <div class="timeline-line"></div>
+        <div class="timeline-events">
+          <div class="timeline-event">
+            <img class="logo-placeholder" src="logos/autobus.png" alt="Autobús">
+            <h3>Autobús</h3>
+          </div>
+          <div class="timeline-event">
+            <img class="logo-placeholder" src="logos/ceremonia.png" alt="Ceremonia">
+            <h3>Ceremonia</h3>
+          </div>
+          <div class="timeline-event">
+            <img class="logo-placeholder" src="logos/coctel.png" alt="Cóctel">
+            <h3>Cóctel</h3>
+          </div>
+          <div class="timeline-event">
+            <img class="logo-placeholder" src="logos/Banquete.png" alt="Banquete">
+            <h3>Comida</h3>
+          </div>
+          <div class="timeline-event">
+            <img class="logo-placeholder" src="logos/fiesta.png" alt="Fiesta">
+            <h3>Fiesta</h3>
+          </div>
+          <div class="timeline-event">
+            <img class="logo-placeholder" src="logos/autobus.png" alt="Autobús">
+            <h3>Autobús</h3>
+          </div>
+        </div>
+        <!-- Hint visual para scroll en móvil -->
+        <p class="scroll-hint">← Desliza para ver todos los eventos →</p>
+      </div>
+      <p class="timeline-note">
+        Habrá autobuses de ida y vuelta desde Cantalejo. Hora a determinar.
+      </p>
+    </section>
+  </main>
+  
+  <footer>
+    <p>Álvaro & Ana · 23 de mayo de 2026 · Zibá, Segovia</p>
+    <p>Hecho con ❤️ para nuestro día especial</p>
+  </footer>
+</body>
+</html>
